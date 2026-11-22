@@ -90,6 +90,8 @@ demo/                                run.sh, sample-requests.http, sample-data.j
 
 ## 🤖 AI-Assisted Development
 
+📄 **The full report is in [docs/AI-USAGE.md](docs/AI-USAGE.md).** It covers the prompt log, my decisions vs. the AI's, the 8 AI mistakes and how each was caught, how output was verified, a comparison of approaches, and prompting lessons.
+
 Built with **Claude Code**, using the `feature-dev` plugin workflow:
 1. **Discovery.** Claude read `TASKS.md` and recommended a framework (Express vs FastAPI).
 2. **Clarifying questions.** These settled the Task 4 options, overdraft behaviour, multi-currency balances, and language and tests.
