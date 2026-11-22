@@ -102,7 +102,8 @@ The most useful part of the process was the AI checking its own work. **Every fi
 
 ## 6. Comparing AI approaches
 
-Only one AI product (Claude Code) was used. It still produced clearly different approaches, which can be compared:
+Claude Code was used as the primary AI development tool. 
+ChatGPT was also used to clarify technical concepts, evaluate architectural alternatives, and verify selected implementation decisions. It still produced clearly different approaches, which can be compared:
 
 | Approach | Strengths | Weaknesses |
 |----------|-----------|------------|
@@ -132,5 +133,5 @@ Only one AI product (Claude Code) was used. It still produced clearly different 
 |------------|---------|
 | [`ai-prompt-1-planning.png`](screenshots/ai-prompt-1-planning.png) | Prompts → framework choice → clarifying questions → architecture *(recap rendered from the session transcript)* |
 | [`ai-prompt-2-review-loop.png`](screenshots/ai-prompt-2-review-loop.png) | Reviews → reproduced bugs → fixes *(recap rendered from the session transcript)* |
-| `claude-code-*.png` | Direct captures of the Claude Code terminal *(added by me)* |
 | [`01`–`07`](screenshots/) | Real terminal output of the running API and the test suite |
+| [`08`–`11`](screenshots/) | My own manual testing of the AI-built API (personal account, UAH, overdraft, rate limit) |

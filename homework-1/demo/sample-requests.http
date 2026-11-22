@@ -1,5 +1,5 @@
 ### Banking Transactions API — sample requests
-### Use with the VS Code "REST Client" extension (or JetBrains HTTP Client).
+### Open in PhpStorm / WebStorm / IntelliJ (built-in HTTP Client) and click ▶ next to each request.
 ### Run top to bottom: later requests depend on earlier deposits.
 
 @baseUrl = http://localhost:3000
@@ -15,8 +15,7 @@ Content-Type: application/json
   "type": "deposit"
 }
 
-### 2. Transfer (201)
-# @name transfer
+### 2. Transfer (201) — saves the new id for request 7
 POST {{baseUrl}}/transactions
 Content-Type: application/json
 
@@ -27,6 +26,8 @@ Content-Type: application/json
   "currency": "USD",
   "type": "transfer"
 }
+
+> {% client.global.set("transferId", response.body.id); %}
 
 ### 3. Withdrawal (201)
 POST {{baseUrl}}/transactions
@@ -66,7 +67,7 @@ Content-Type: application/json
 GET {{baseUrl}}/transactions
 
 ### 7. Get transaction by id (200) — uses the id from request 2
-GET {{baseUrl}}/transactions/{{transfer.response.body.id}}
+GET {{baseUrl}}/transactions/{{transferId}}
 
 ### 8. Unknown transaction (404)
 GET {{baseUrl}}/transactions/does-not-exist

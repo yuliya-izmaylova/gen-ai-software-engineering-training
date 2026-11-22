@@ -104,17 +104,31 @@ Built with **Claude Code**, using the `feature-dev` plugin workflow:
 
 All terminal screenshots show real output from the running API (`docs/screenshots/`).
 
-| # | Screenshot | Shows |
-|---|------------|-------|
-| 1 | [API running](docs/screenshots/01-api-running.png) | `./demo/run.sh --seed` starts the server and loads the sample data |
-| 2 | [Create transactions](docs/screenshots/02-create-transactions.png) | Deposit and transfer (`201`), overdraft rejected (`422`) |
-| 3 | [Validation errors](docs/screenshots/03-validation-errors.png) | Field-level `400` details, malformed JSON, `404` |
-| 4 | [History filters](docs/screenshots/04-history-filters.png) | `accountId`, `type`, date-range filters, invalid filters |
-| 5 | [Balance & summary](docs/screenshots/05-balance-summary.png) | Per-currency balances, account summary (Task 4A) |
-| 6 | [Rate limiting](docs/screenshots/06-rate-limit.png) | Request #101 within a minute → `429` (Task 4D) |
-| 7 | [Tests](docs/screenshots/07-tests-passing.png) | All 85 Jest tests passing |
-| 8 | [AI interaction 1](docs/screenshots/ai-prompt-1-planning.png) | Prompts → framework choice, clarifying questions, architecture |
-| 9 | [AI interaction 2](docs/screenshots/ai-prompt-2-review-loop.png) | Review agents → reproduced bugs → fixes |
+| #  | Screenshot                                                                       | Shows                                                              |
+|----|----------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| 1  | [API running](docs/screenshots/01-api-running.png)                               | `./demo/run.sh --seed` starts the server and loads the sample data |
+| 2  | [Create transactions](docs/screenshots/02-create-transactions.png)               | Deposit and transfer (`201`), overdraft rejected (`422`)           |
+| 3  | [Validation errors](docs/screenshots/03-validation-errors.png)                   | Field-level `400` details, malformed JSON, `404`                   |
+| 4  | [History filters](docs/screenshots/04-history-filters.png)                       | `accountId`, `type`, date-range filters, invalid filters           |
+| 5  | [Balance & summary](docs/screenshots/05-balance-summary.png)                     | Per-currency balances, account summary (Task 4A)                   |
+| 6  | [Rate limiting](docs/screenshots/06-rate-limit.png)                              | Request #101 within a minute → `429` (Task 4D)                     |
+| 7  | [Tests](docs/screenshots/07-tests-passing.png)                                   | All 85 Jest tests passing                                          |
+
+**My own manual testing** (own account `ACC-jul13`, UAH currency):
+
+| #  | Screenshot                                                                       | Shows                                                              |
+|----|----------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| 8  | [Personal deposit](docs/screenshots/08-personal-deposit.png)                     | Personal account created with a 200 UAH deposit                    |
+| 9  | [Personal transfer](docs/screenshots/09-personal-transfer.png)                   | Transfer from personal account: USD attempt `failed` (insufficient funds), UAH transfer `completed` |
+| 10 | [Personal balance & summary](docs/screenshots/10-personal-balance-summary.png)   | Balance (100 UAH) and summary for the personal account in the browser |
+| 11 | [Personal rate-limit run](docs/screenshots/11-personal-rate-limit.png)           | Console run: 100 × `200`, then `429 Too Many Requests`             |
+
+**AI interaction:**
+
+| #  | Screenshot                                                                       | Shows                                                              |
+|----|----------------------------------------------------------------------------------|--------------------------------------------------------------------|
+| 12 | [AI interaction 1](docs/screenshots/ai-prompt-1-planning.png)                    | Prompts → framework choice, clarifying questions, architecture     |
+| 13 | [AI interaction 2](docs/screenshots/ai-prompt-2-review-loop.png)                 | Review agents → reproduced bugs → fixes                            |
 
 ![API running](docs/screenshots/01-api-running.png)
 ![Create transactions](docs/screenshots/02-create-transactions.png)
